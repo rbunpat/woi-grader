@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "npx puppeteer browsers install chrome && vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -32,6 +32,7 @@
 	"type": "module",
 	"dependencies": {
 		"@formkit/auto-animate": "^0.8.1",
+		"chrome-aws-lambda": "^10.1.0",
 		"puppeteer": "^21.11.0"
 	}
 }
