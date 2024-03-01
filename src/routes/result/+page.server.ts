@@ -82,15 +82,3 @@ export async function load({ fetch, url }) {
 		};
 	}
 }
-
-
-export const actions = {
-	async post({ request, params, resolve }) {
-		const res = await fetch(`http://localhost:3000/scrape?username=${params.username}&password=${params.password}`);
-		if (!res.ok) {
-			throw new Error('Failed to fetch data');
-		}
-		const data = await res.json();
-		return resolve(data);
-	}
-};
